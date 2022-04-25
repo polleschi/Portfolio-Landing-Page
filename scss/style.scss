@@ -702,3 +702,13 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+
+$color: (
+	primary:#449944,
+	secondary:#444499,
+);
+
+h1 {
+	color: map-get($color, primary);
+}
