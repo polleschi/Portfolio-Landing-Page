@@ -712,3 +712,28 @@ $color: (
 h1 {
 	color: map-get($color, primary);
 }
+
+@mixin color-invertido {
+	background-color: #111;
+	color: #eee
+}
+
+h1.invertido {
+	font-size: 1.3em;
+	padding: 15px;
+	@include color-invertido;
+}
+
+div.invertido {
+	padding: 5px;
+	@include color-invertido;
+}
+
+$map: (
+	key: value,
+	nextkey: nextvalue
+);
+
+.element:before {
+	content: map-get($map, key);
+}
